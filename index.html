@@ -2,15 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    
     
     <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-10c40100.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-8c59ed88.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-ca830035.css">
   </head>
   <body>
-
+    <form class="search-form">
+      <label class="input-label-search-form visually-hidden" for="search-input">
+        Search
+      </label>
+      <input class="search-input-form" type="text" name="search" id="search-input" placeholder="Search images..." />
+      <button class="btn-search-form" type="submit">Search</button>
+    </form>
+    
+    <span class="loader">Loading images, please wait...</span>
+    
+    <ul class="gallery"></ul>
+    
+    
+    
     
   </body>
 </html>
