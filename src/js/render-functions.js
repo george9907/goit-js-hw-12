@@ -1,21 +1,14 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
-import { photosGallery, lightbox } from '../main';
+export const photosGallery = document.querySelector('.gallery');
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250
+});
 
-
-export function renderPhotos(arr) { 
-    if (arr.length == 0) {
-        iziToast.error({
-            theme: 'dark',
-            backgroundColor: '#EF4040',
-            progressBarColor: '#B51B1B',
-            message: "Sorry, there are no images matching your search query. Please try again!",
-            messageColor: '#FAFAFB',
-            position: 'topRight',
-        });
-    } else {
-        const markup = arr.map(({largeImageURL, webformatURL, tags, likes, views, comments, downloads}) => {
+export function renderPhotos(arr) {
+        const markup = arr.map(({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) => {
             return `<li class="photos-list-item">
             <a class="photos-list-link" href="${largeImageURL}">
             <img class="photo" src="${webformatURL}" alt="${tags}"/>
@@ -31,5 +24,4 @@ export function renderPhotos(arr) {
             .join("");
         photosGallery.insertAdjacentHTML("beforeend", markup);
         lightbox.refresh();
-    }
 }

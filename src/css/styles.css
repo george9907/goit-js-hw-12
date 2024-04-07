@@ -203,9 +203,34 @@ body {
 }
 
 
-
-
 .hidden{
   display: none;
   opacity: 0;
+  visibility: hidden;
+}
+
+.load-more-btn {
+  width: 125px;
+  height: 40px;
+  display: block;
+  padding: 8px 16px;
+  text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background-color 250ms linear;
+}
+
+.load-more-btn:hover,
+.load-more-btn:focus {
+  background-color: #6c8cff;
 }
