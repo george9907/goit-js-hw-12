@@ -99,12 +99,12 @@ function onLoadMoreClick() {
 };
 
 function showElement(element) {
-    element.classList.remove('hidden');
+    element.classList.toggle('hidden');
     element.style.display = 'flex';
 };
 
 function hideElement(element) {
-    element.classList.add('hidden');
+    element.classList.toggle('hidden');
     element.style.display = 'none';
 };
 

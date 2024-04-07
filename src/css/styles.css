@@ -84,6 +84,10 @@ body {
   border-color: #000;
 }
 
+.search-input-form:focus-within {
+  border-color: #4e75ff;
+}
+
 .btn-search-form {
   width: 91px;
   height: 40px;
@@ -109,12 +113,37 @@ body {
   background-color: #6c8cff;
 }
 
-/* ------------Gallery------------ */
+.next-page-btn {
+  width: 125px;
+  height: 40px;
+  display: block;
+  padding: 8px 16px;
+  text-align: center;
+  margin: 20px 657px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background-color 250ms linear;
+}
+
+.next-page-btn:hover,
+.next-page-btn:focus {
+  background-color: #6c8cff;
+}
+
+/* ===================Gallery=============== */
+
 
 .gallery {
   display: flex;
   width: 1440px;
-  height: 792px;
   padding-top: 108px;
   padding-right: 156px;
   padding-left: 156px;
@@ -122,7 +151,7 @@ body {
   flex-wrap: wrap;
   row-gap: 24px;
   column-gap: 24px;
-  background-color: #FFFFFF;
+  background-color: #fff;
 }
 
 .photos-list-item {
@@ -135,12 +164,6 @@ body {
   width: 100%;
   height: 152px;
   object-fit: cover;
-}
-
-
-.accent {
-  font-weight: 600;
-  line-height: 1.33;
 }
 
 .photo-information-container {
@@ -162,8 +185,13 @@ body {
   letter-spacing: 0.04em;
 }
 
+.accent {
+  font-weight: 600;
+  line-height: 1.33;
+} 
 
-/* ------Loder------- */
+/* ================Loader============= */
+
 
 .loader {
   color: #2E2F42;
@@ -203,11 +231,8 @@ body {
 }
 
 
-.hidden{
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
+/* ============Load_more========= */
+
 
 .load-more-btn {
   width: 125px;
@@ -215,8 +240,7 @@ body {
   display: block;
   padding: 8px 16px;
   text-align: center;
-margin-top: 50px;
-margin-bottom: 50px;
+  margin: 20px auto;
   border: none;
   border-radius: 8px;
   background-color: #4e75ff;
